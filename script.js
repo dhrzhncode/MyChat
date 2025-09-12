@@ -19,7 +19,7 @@ function send(){
     chat.appendChild(aiMsgDiv);
     chat.scrollTop = chat.scrollHeight;
 
-    const API = "your_API";
+    const API = "AIzaSyDnrV0Dj31ogSOkP3Lz9Wr5aZzMXFXYZBk"; //paste yout API key here!   AIzaSyDnrV0Dj31ogSOkP3Lz9Wr5aZzMXFXYZBk
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API}`;
 
     const payload = {
@@ -32,8 +32,7 @@ function send(){
     fetch(url,{
         method: 'POST',
         headers:{
-            'Content-Type':'application/json',
-            // 'Authorization': `Bearer ${API}`
+            'Content-Type':'application/json'
         },
         body: JSON.stringify(payload)
     })
@@ -45,8 +44,9 @@ function send(){
         chat.scrollTop = chat.scrollHeight;
     })
     .catch(error => {
+        // aiMsgDiv.classList.remove("typing");
         let errorMsgDiv = document.createElement("div");
-        errorMsgDiv.setAttribute('class','errorMsg');
+        errorMsgDiv.setAttribute('class','aiMsg');
         errorMsgDiv.innerHTML = "Error: Could not get response";
         document.getElementById("chat").appendChild(errorMsgDiv);
         chat.scrollTop = chat.scrollHeight;
