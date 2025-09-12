@@ -19,7 +19,7 @@ function send(){
     chat.appendChild(aiMsgDiv);
     chat.scrollTop = chat.scrollHeight;
 
-    const API = "AIzaSyDnrV0Dj31ogSOkP3Lz9Wr5aZzMXFXYZBk"; //paste yout API key here!   AIzaSyDnrV0Dj31ogSOkP3Lz9Wr5aZzMXFXYZBk
+    const API = "your_Gemini_API"; //paste yout API key here!
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API}`;
 
     const payload = {
@@ -44,7 +44,6 @@ function send(){
         chat.scrollTop = chat.scrollHeight;
     })
     .catch(error => {
-        // aiMsgDiv.classList.remove("typing");
         let errorMsgDiv = document.createElement("div");
         errorMsgDiv.setAttribute('class','aiMsg');
         errorMsgDiv.innerHTML = "Error: Could not get response";
