@@ -5,5 +5,5 @@ Use your API key to run this AI Chatbot smoothly and effectively.
 3. Keep coding💻, keep experimenting, and most importantly… keep rocking! 🎶✨
 
 \\\\\\\\\\ .......By Your DhrzhnCode....... ///////////
-git profile: github.com/dhrzhncode
+git profile: https://github.com/dhrzhncode
 linkedin: https://www.linkedin.com/in/priyadharshan-s
